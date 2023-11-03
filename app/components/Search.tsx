@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { MovieCardProps } from './MovieCard';
-import { MovieCard } from "./GetMovies";
+import { MovieCard } from "./MovieCard";
 import MovieOverview from './MovieOverview';
 
 
