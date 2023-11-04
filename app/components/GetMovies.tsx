@@ -76,8 +76,8 @@ const Index: React.FC = () => {
       <h1 className='  text-red-600  pt-5 text-xl justify-center flex '>WowMoviez</h1>
       <div className="justify-center flex-row items-center flex ">
       <button onClick={() => setIsCustomerSearching(false)} className="mr-0 w-20 h-10 mt-3 bg-yellow-400 rounded-full">Popular movies</button>
-        <input type='text' value={query} onChange={(e) => {setquery(e.target.value); handlesearch()}} autoFocus placeholder='Search movies...' className=" h-10 w-96  justify-center mt-3 rounded-md text-black"></input>
-        <button  className="bg-yellow-400 h-10 w-20 rounded-full mt-3 ">Search</button>
+        <input type='text' value={query} onChange={(e) => {setquery(e.target.value); handlesearch()}} autoFocus placeholder='Search movies...' className="  md:h-10 md:w-96  justify-center mt-3 rounded-md text-black"></input>
+        {/* <button  className="bg-yellow-400 h-10 w-20 rounded-full mt-3 ">Search</button> */}
       </div>
       <Search searchMovies={searchMovies}/>
 
@@ -87,12 +87,12 @@ const Index: React.FC = () => {
     <div className='w-full h-20  bg-gray-800'>
       <h1 className='text-red-600 text-3xl ml-4 pt-4'>wowmoviez</h1>
     </div>
-    <h1 className='  text-red-600  pt-16 text-3xl justify-center flex '> <span className='text-white mr-2 '>welcome to </span> wowmoviez</h1>
-    <div className="justify-center flex-row items-center flex">
-  <input type='text' value={query} onChange={(e) => {setquery(e.target.value); handlesearch()}} placeholder='Search movies...' className=" h-10 w-96  justify-center mt-6 rounded-md text-black"></input>
+    <h1 className=' text-lg ml-6 text-red-600  pt-16 md:ml-0 md:text-3xl md:justify-center flex '> <span className='text-white mr-2 '>welcome to </span> wowmoviez</h1>
+    <div className="md:justify-center md:flex-row md:items-center flex">
+  <input type='text' value={query} onChange={(e) => {setquery(e.target.value); handlesearch()}} placeholder='Search movies...' className="h-10 w-42 ml-4 md:h-10 md:w-96  md:justify-center mt-6 rounded-md text-black"></input>
   {/* <button onClick={handlesearch} className="bg-yellow-400 h-10 w-20 rounded-full mt-7 ">Search</button> */}
 </div>
-<div className="grid ml-5  sm-ml-30 sm-grid-cols-2 md:grid-cols-4 justify-center">
+<div className="grid ml-2 :mr-2 text-white grid-cols-1 md:mr-6 md:grid-cols-4 md:ml-5 md:text-white  justify-center">
   {movies.map((moviereq) => (
     <MovieCard key={moviereq.id}
       id={moviereq.id}

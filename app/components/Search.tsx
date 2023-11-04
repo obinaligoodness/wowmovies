@@ -23,7 +23,7 @@ const SearchResults: React.FC<SearchResultsProps> = ({ searchMovies }) => {
         
     return (
         <div>
-            <div className="grid ml-5 grid-cols-4 justify-center">
+            <div className="grid ml-2 :mr-2 text-white grid-cols-1 md:mr-6 md:grid-cols-4 md:ml-5 md:text-green-500  justify-center">
                 {searchMovies.map((movieres) => (<MovieCard key={movieres.id}
                     id={movieres.id}
                     title={movieres.title}
