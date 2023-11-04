@@ -92,7 +92,7 @@ const Index: React.FC = () => {
   <input type='text' value={query} onChange={(e) => {setquery(e.target.value); handlesearch()}} placeholder='Search movies...' className="h-10 w-42 ml-4 md:h-10 md:w-96  md:justify-center mt-6 rounded-md text-black"></input>
   {/* <button onClick={handlesearch} className="bg-yellow-400 h-10 w-20 rounded-full mt-7 ">Search</button> */}
 </div>
-<div className="grid ml-2 :mr-2 text-white grid-cols-1 md:mr-6 md:grid-cols-4 md:ml-5 md:text-white  justify-center">
+<div className="grid ml-12 mr-2 text-white grid-cols-1 md:mr-6 md:grid-cols-4 md:ml-5 md:text-white  justify-center">
   {movies.map((moviereq) => (
     <MovieCard key={moviereq.id}
       id={moviereq.id}
