@@ -57,7 +57,7 @@ export const MovieCard: React.FC<Movie> = ({
 
   return (
     <div style={{ cursor: 'pointer' }} className=' hover:-translate-y-2'>
-      <img src={API_IMG + poster_path} alt={title} onClick={pick} className=" ml-6 mr-4  md:ml-8  w-44 h-54 md:w-80 md:h-70 object-cover rounded-t-lg pt-5" />
+      <img src={API_IMG + poster_path} alt={title} onClick={pick} className=" ml-6 mr-4  md:ml-8  w-52 h-54 md:w-80 md:h-70 object-cover rounded-t-lg pt-5" />
       <div className=" gap-1 flex md:flex md:items-center md:gap-0">
         <p className="text-xs ml-6 md:ml-8 md:text-xl">{release_date}</p>
         <p className="ml-10 text-xs  md:text-xl md:ml-20">{"Rating: " + vote_average}</p>
