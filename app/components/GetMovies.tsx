@@ -89,7 +89,7 @@ const Index: React.FC = () => {
     </div>
     <h1 className=' text-lg ml-6 text-red-600  pt-16 md:ml-0 md:text-3xl md:justify-center flex '> <span className='text-white mr-2 '>welcome to </span> wowmoviez</h1>
     <div className="md:justify-center md:flex-row md:items-center flex">
-  <input type='text' value={query} onChange={(e) => {setquery(e.target.value); handlesearch()}} placeholder='Search movies...' className="h-10 w-42 ml-4 md:h-10 md:w-96  md:justify-center mt-6 rounded-md text-black"></input>
+  <input type='text' value={query} onChange={(e) => {setquery(e.target.value); handlesearch()}} placeholder='Search movies...' className="h-10 w-42 ml-10 md:ml-4 md:h-10 md:w-96  md:justify-center mt-6 rounded-md text-black"></input>
   {/* <button onClick={handlesearch} className="bg-yellow-400 h-10 w-20 rounded-full mt-7 ">Search</button> */}
 </div>
 <div className="grid ml-8 mr-2 text-white grid-cols-1 md:mr-6 md:grid-cols-4 md:ml-5 md:text-white  justify-center">
