@@ -2,7 +2,7 @@
 "use client"
 
 import { useEffect, useState } from "react";
-import { Movie } from "./GetMovies";
+import { Movie } from "../home/page";
 import PickedMovie from "../details/[id]/page";
 import Link from "next/link";
 

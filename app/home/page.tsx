@@ -1,10 +1,10 @@
 "use client"
 // pages/index.tsx
 import { useState, useEffect } from 'react';
-import { MovieCardProps } from './MovieCard';
-import Search from './Search';
-import MovieCard from './MovieCard';
-import SearchResults from './Search';
+import { MovieCardProps } from '../components/MovieCard';
+import Search from '../components/Search';
+import MovieCard from '../components/MovieCard';
+import SearchResults from '../components/Search';
 // import { useRouter } from 'next/router';
 // import PickedMovies from './PickedMovie'
 
@@ -50,6 +50,9 @@ const Index: React.FC = () => {
     }}
 
 }
+const emptyQuery=()=>{
+  setquery("")
+}
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -72,20 +75,22 @@ const Index: React.FC = () => {
   console.log(movies)
 
   return isCustomerSearching ? (
-    <div className="w-full h-screen bg-gray-900 text-white">
+    <div className="w-full h-fit bg-gray-900 text-white">
+      <div className='w-full md:h-20 h-12  bg-gray-800'>
+      <h1 onClick={() => {setIsCustomerSearching(false),emptyQuery()}}  className='text-lg ml-2 text-red-600 md:text-3xl md:ml-4 pt-4'>wowmoviez</h1>
+    </div>
       <h1 className='  text-red-600  pt-5 text-xl justify-center flex '>WowMoviez</h1>
       <div className="justify-center flex-row items-center flex ">
-      <button onClick={() => setIsCustomerSearching(false)} className="mr-0 w-20 h-10 mt-3 bg-yellow-400 rounded-full">Popular movies</button>
+      <button onClick={() => {setIsCustomerSearching(false),emptyQuery()}} className="mr-0 w-20 h-10 mt-3 bg-yellow-400 rounded-full">Back</button>
         <input type='text' value={query} onChange={(e) => {setquery(e.target.value); handlesearch()}} autoFocus placeholder='Search movies...' className="  h-10 w-42 ml-8 mt-2 md:ml-4 md:h-10 md:w-96  md:justify-center md:mt-6 rounded-md text-black"></input>
         {/* <button  className="bg-yellow-400 h-10 w-20 rounded-full mt-3 ">Search</button> */}
       </div>
       <Search searchMovies={searchMovies}/>
-
       
     </div>
   ) :<div className="w-full h-700 bg-gray-900 text-white">
     <div className='w-full md:h-20 h-12  bg-gray-800'>
-      <h1 className='text-lg ml-2 text-red-600 md:text-3xl md:ml-4 pt-4'>wowmoviez</h1>
+      <h1  className='text-lg ml-2 text-red-600 md:text-3xl md:ml-4 pt-4'>wowmoviez</h1>
     </div>
     <h1 className=' text-lg ml-10 text-red-600 pt-6  md:pt-16 md:ml-0 md:text-3xl md:justify-center flex '> <span className='text-white mr-2 '>welcome to </span> wowmoviez</h1>
     <div className="md:justify-center md:flex-row md:items-center flex">

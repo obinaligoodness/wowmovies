@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react";
-import Index from "./components/GetMovies";
+import Index from "./home/page";
 import MovieCard, { MovieCardProps } from "./components/MovieCard";
 import Search from "./components/Search";
 import PickedMovie from "./details/[id]/page";
